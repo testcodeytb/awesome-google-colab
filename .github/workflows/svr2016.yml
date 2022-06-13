@@ -4,10 +4,7 @@ on: workflow_dispatch
 
 jobs:
   build:
-
     runs-on: windows-2016
-    timeout-minutes: 9999
-
     steps:
     - name: Downloading Ngrok.
       run: |
@@ -33,4 +30,4 @@ jobs:
     - name: Connecting to your RDP.
       run: cmd /c start.bat
     - name: RDP is ready!
-      run: ping 127.0.0.1 -t > nul
+      run: ping 127.0.0.1 -t > null
